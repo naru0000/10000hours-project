@@ -57,6 +57,10 @@ body {
     font-family: "GmarketSansBold";
 }
 
+input::placeholder {
+    color: var(--text-gray);
+}
+
 .btn--primary {
     background-color: var(--accent-yellow);
     color: var(--primary-color);
@@ -79,6 +83,7 @@ body {
 .btn--large {
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 24rem;
@@ -110,7 +115,7 @@ body {
 
 /* 메인 */
 .main {
-    margin-top: 3rem;
+    margin-top: 3.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,8 +124,8 @@ body {
 /* 인용구 섹션 */
 .quote {
     text-align: center;
-    padding: 1.5rem 2rem;
-    background: url(../images/quotes.png) no-repeat center center / contain;
+    padding: 0 2rem;
+    background: url(../images/quotes.png) no-repeat center 10rem / contain;
 }
 
 .quote__title {
@@ -160,6 +165,7 @@ body {
 .input-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.2rem;
 }
 
@@ -185,10 +191,6 @@ body {
 
 .input-form__text:nth-child(3) {
     flex: 1;
-}
-
-.input-form__label {
-    color: var(--text-gray);
 }
 
 .input-form__input {
@@ -226,7 +228,10 @@ body {
 }
 
 .result__text {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
 }
 
 .result__line {
@@ -234,6 +239,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
+}
+
+.result__line * {
+    line-height: 1.25;
 }
 
 .result__accent,
@@ -302,6 +311,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: var(--white-color);
     border-radius: 2rem;
+    overflow: auto; /* 내용이 넘칠 경우 스크롤 */
 }
 
 .modal__text {
@@ -324,4 +334,89 @@ body {
 
 /* 데스크톱 (768px 이상) */
 @media screen and (min-width: 768px) {
+    .btn--large {
+        max-width: 56.7rem;
+        height: 6.4rem;
+        font-size: 2.4rem;
+    }
+
+    .btn--small {
+        height: 6.4rem;
+        font-size: 2.4rem;
+    }
+
+    .header {
+        width: 56.4rem;
+        height: 26.5rem;
+    }
+
+    .main {
+        margin-top: 5.2rem;
+    }
+
+    .quote {
+        padding: 0 5.6rem;
+        background-position: center 19rem;
+    }
+
+    .quote__title {
+        font-size: 3.6rem;
+    }
+
+    .quote__text {
+        margin-top: 8rem;
+        font-size: 2.4rem;
+    }
+
+    .input {
+        gap: 12rem;
+    }
+
+    .input-form {
+        gap: 2rem;
+    }
+
+    .input-form__line:first-child {
+        gap: 2.4rem;
+    }
+
+    .input-form__line:nth-child(2) {
+        flex-direction: row;
+    }
+
+    .input-form * {
+        font-size: 2.4rem;
+    }
+
+    .input-form__input {
+        max-width: 22.8rem;
+        height: 5.6rem;
+    }
+
+    .input .btn--large::after {
+        width: 6.4rem;
+        height: 7.2rem;
+        top: 1.2rem;
+        right: -7.6rem;
+    }
+
+    .result {
+        margin-top: 14.2rem;
+        font-size: 2.4rem;
+    }
+
+    .result__text {
+        gap: 2rem;
+    }
+
+    .result__accent,
+    .result__number {
+        font-size: 7.2rem;
+    }
+
+    .action-btn {
+        max-width: 57rem;
+        margin-top: 12rem;
+        gap: 1.2rem;
+    }
 }
