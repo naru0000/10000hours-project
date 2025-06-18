@@ -1,0 +1,327 @@
+/* 웹폰트 설정 */
+
+@font-face {
+    font-family: "OTEnjoystoriesBA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format("woff2"),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format("woff"),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format("opentype");
+}
+
+/* 변수 설정 */
+
+:root {
+    /* Colors */
+    --primary-color: #5b2386; /* 보라색 배경 */
+    --secondary-color: #8443b6; /* 연한 보라색 */
+    --accent-yellow: #fcee21; /* 노란색 (제목, 버튼) */
+    --text-white: #ffffff; /* 흰색 텍스트 */
+    --text-gray: #babcbe; /* 회색 텍스트 */
+    --white-color: #ffffff; /* 입력창 배경 */
+    --shadow: 2px 4px 10px 0px #00000026;
+    --shadow-l: 4px 4px 30px 0px #00000026;
+}
+
+/* 폰트 초기화 */
+html {
+    font-size: 62.5%; /* font-size 1rem = 10px*/
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+[class*="btn--"] {
+    font-family: "GmarketSansBold";
+}
+
+.btn--primary {
+    background-color: var(--accent-yellow);
+    color: var(--primary-color);
+}
+
+.btn--secondary {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.btn--small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.6rem;
+    border-radius: 1.2rem;
+    line-height: 100%;
+}
+
+.btn--large {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 24rem;
+    height: 7.2rem;
+    padding: 0 3.8rem;
+    border-radius: 1.2rem;
+    box-shadow: var(--shadow);
+    font-size: 1.4rem;
+}
+
+/* 헤더 */
+.header {
+    width: 27.8rem;
+    height: 13rem;
+    margin: 4rem auto 0;
+    background: url(../images/clock.png) no-repeat center center / contain;
+}
+
+.header__title {
+    width: 100%;
+    height: 100%;
+}
+
+.header__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 메인 */
+.main {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 인용구 섹션 */
+.quote {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background: url(../images/quotes.png) no-repeat center center / contain;
+}
+
+.quote__title {
+    font-family: "OTEnjoystoriesBA";
+    font-size: 2.2rem;
+    color: var(--accent-yellow);
+}
+
+.quote__text {
+    margin-top: 3.2rem;
+    font-family: "GmarketSansMedium", "GmarketSansBold";
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2.2;
+    color: var(--white-color);
+}
+
+.quote__accent {
+    font-weight: 700;
+}
+
+/* 입력 섹션 */
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+    gap: 8rem;
+}
+
+.input,
+.result,
+.footer {
+    color: var(--white-color);
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.input-form * {
+    font-family: "GmarketSansMedium", "GmarketSansBold";
+    font-size: 1.4rem;
+}
+
+.input-form__line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.input-form__line:first-child {
+    gap: 0.8rem;
+}
+
+.input-form__line:nth-child(2) {
+    flex-direction: column;
+}
+
+.input-form__text:nth-child(3) {
+    flex: 1;
+}
+
+.input-form__label {
+    color: var(--text-gray);
+}
+
+.input-form__input {
+    width: 100%;
+    max-width: 15.6rem;
+    height: 3.8rem;
+    padding: 0 0.8rem;
+    border: none;
+    border-radius: 0.8rem;
+    text-align: center;
+}
+
+.input-form__group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.input .btn--large::after {
+    position: absolute;
+    top: 4.2rem;
+    right: -4.6rem;
+    content: "";
+    display: inline-block;
+    width: 4.3rem;
+    height: 4.8rem;
+    background: url(../images/click.png) no-repeat center center / cover;
+}
+
+/* 결과 섹션 */
+.result {
+    margin-top: 6.8rem;
+    font-family: "GmarketSansMedium", "GmarketSansBold";
+    font-size: 1.2rem;
+}
+
+.result__text {
+    text-align: center;
+}
+
+.result__line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.result__accent,
+.result__number {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+/* 액션 버튼 섹션 */
+.action-btn {
+    display: flex;
+    width: 100%;
+    max-width: 31.3rem;
+    gap: 0.8rem;
+    margin-top: 5.2rem;
+}
+
+.action-btn .btn--small:first-child {
+    flex: 2;
+}
+
+.action-btn .btn--small:nth-child(2) {
+    flex: 1;
+}
+
+/* 푸터 */
+.footer {
+    width: 100%;
+    max-width: 26rem;
+    margin: 6rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* 모달 */
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+    width: 100%;
+    max-width: 33rem;
+    font-family: "OTEnjoystoriesBA";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    position: fixed;
+    padding: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-color);
+    border-radius: 2rem;
+}
+
+.modal__text {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 6.4rem;
+}
+
+.modal__text * {
+    line-height: 100%;
+}
+
+.modal__line {
+    font-size: 3.6rem;
+}
+
+.modal--hidden {
+    display: none;
+}
+
+/* 데스크톱 (768px 이상) */
+@media screen and (min-width: 768px) {
+}
