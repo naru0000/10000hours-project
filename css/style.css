@@ -338,7 +338,7 @@ input::placeholder {
 }
 
 .modal--hidden {
-    /* display: none; */
+    display: none;
 }
 
 /* 데스크톱 (768px 이상) */
