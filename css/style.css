@@ -429,6 +429,7 @@ input::placeholder {
 
     .footer {
         max-width: 36.5rem;
+        gap: 2rem;
     }
 
     .footer__text {
