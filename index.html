@@ -32,35 +32,37 @@
                 <section class="input">
                     <form class="input-form">
                         <div class="input-form__line">
-                            <h3 class="input-form__text">나는</h3>
+                            <span class="input-form__text">나는</span>
                             <label for="inputJob" class="input-form__label">
+                                <span class="sr-only">직업 입력란</span>
                                 <input type="text" name="inputJob" class="input-form__input" id="inputJob" placeholder="예)프로그래밍" />
                             </label>
-                            <h3 class="input-form__text">전문가가 될 것이다.</h3>
+                            <span class="input-form__text">전문가가 될 것이다.</span>
                         </div>
                         <div class="input-form__line">
-                            <h3 class="input-form__text">그래서 앞으로 매일 하루에</h3>
+                            <span class="input-form__text">그래서 앞으로 매일 하루에</span>
                             <div class="input-form__group">
                                 <label for="inputHour" class="input-form__label">
+                                    <span class="sr-only">훈련 시간 입력란</span>
                                     <input type="text" name="inputHour" class="input-form__input" id="inputHour" placeholder="예)5시간" />
                                 </label>
-                                <h3 class="input-form__text">시간씩 훈련할 것이다.</h3>
+                                <span class="input-form__text">시간씩 훈련할 것이다.</span>
                             </div>
                         </div>
+                        <button type="submit" class="btn--large btn--primary">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
                     </form>
-                    <button type="button" class="btn--large btn--primary">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
                 </section>
                 <section class="result">
                     <div class="result__text">
                         <div class="result__line">
-                            <h3>당신은</h3>
+                            <span>당신은</span>
                             <strong class="result__accent">프로그래밍</strong>
-                            <h3>전문가가 되기 위해서</h3>
+                            <span>전문가가 되기 위해서</span>
                         </div>
                         <div class="result__line">
-                            <h3>대략</h3>
+                            <span>대략</span>
                             <strong class="result__number">5110</strong>
-                            <h3>일 이상 훈련하셔야 합니다! :)</h3>
+                            <span>일 이상 훈련하셔야 합니다! :)</span>
                         </div>
                     </div>
                 </section>
@@ -71,9 +73,9 @@
             </main>
             <footer class="footer">
                 <img src="./images/logo.png" alt="위니브 로고" />
-                <p class="footer__text">
+                <small class="footer__text">
                     본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 위니브에 있습니다. 수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
-                </p>
+                </small>
             </footer>
 
             <!-- 모달창 -->

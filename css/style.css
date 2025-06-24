@@ -30,6 +30,20 @@
         url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format("opentype");
 }
 
+/* 대체 텍스트 클래스 */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* 변수 설정 */
 
 :root {
@@ -94,6 +108,7 @@ input::placeholder {
     max-width: 24rem;
     height: 7.2rem;
     padding: 0 3.8rem;
+    margin-top: 8rem;
     border-radius: 1.2rem;
     box-shadow: var(--shadow);
     font-size: 1.4rem;
@@ -157,7 +172,6 @@ input::placeholder {
     flex-direction: column;
     align-items: center;
     margin-top: 6rem;
-    gap: 8rem;
 }
 
 .input,
@@ -345,6 +359,7 @@ input::placeholder {
         max-width: 56.7rem;
         height: 6.4rem;
         font-size: 2.4rem;
+        margin-top: 12rem;
     }
 
     .btn--small {
@@ -373,10 +388,6 @@ input::placeholder {
     .quote__text {
         margin-top: 8rem;
         font-size: 2.4rem;
-    }
-
-    .input {
-        gap: 12rem;
     }
 
     .input-form {
